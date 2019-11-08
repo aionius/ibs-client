@@ -6,6 +6,7 @@ import "./App.css";
 import Homepage from "./pages/homepage/homepage.component";
 import SearchResultPage from "./pages/search/searchResult.component";
 import Header from "./components/header/header.component";
+import Login from "./pages/login/login.component";
 
 const BookDetails = props => {
    console.log(props);
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={Homepage} />
             <Route path="/search" component={SearchResultPage} />
             <Route path="/book/:isbn13" component={BookDetails} />
+            <Route path="/login" component={Login} />
          </Switch>
       </div>
    );

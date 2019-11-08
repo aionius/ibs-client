@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from "../../assets/bookshelf.svg";
 const Header = () => (
    <div className="header">
       <Link className="logo-container" to="/">
-         <Logo className="log"></Logo>
+         <Logo className="logo"></Logo>
       </Link>
       <div className="options">
          <Link className="option" to="/shop">
