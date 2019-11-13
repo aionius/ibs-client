@@ -4,6 +4,7 @@ import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
 import "./sign-in.styles.scss";
+import axios from "axios";
 
 class SignIn extends React.Component {
    constructor(props) {
@@ -17,6 +18,17 @@ class SignIn extends React.Component {
 
    handleSubmit = event => {
       event.preventDefault();
+      const user = {
+         email: this.state.email,
+         password: this.state.password
+      };
+
+      axios
+         .post("/api/users/login", user)
+         .then(result => {
+            // console.log(result);
+         })
+         .catch(err => console.log(err));
 
       this.setState({ email: "", password: "" });
    };
